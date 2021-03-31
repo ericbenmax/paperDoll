@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         secondHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
         thirdHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
         forthHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
-        
+       
     }//頭大小設定
     
     func imageFaceFrame(_ firstFaceFrame: UIImageView, _ secondFaceFrame: UIImageView, _ thirdFaceFrame: UIImageView, _ forthFaceFrame: UIImageView){
@@ -126,13 +126,15 @@ class ViewController: UIViewController {
         
     }//刪除臉畫面
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.6, alpha: 1)
+        boyGirlView.selectedSegmentTintColor = UIColor(red: 0.8, green: 1, blue: 1, alpha: 1)
+        boyGirlView.backgroundColor = .white
         boyGirlView.selectedSegmentIndex = 0
-        //設定預設為男生
+        //SegmentControl設定
         
         imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
         imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
