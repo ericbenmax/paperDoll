@@ -147,14 +147,14 @@ class ViewController: UIViewController {
         imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
         imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
         imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
-        //設定頭跟臉的畫面
+        //設定頭跟臉的大小
         
         HairButton(firstBoyHairButton!, secondBoyHairButton!, thirdBoyHairButton!, forthBoyHairButton!)
         FaceButton(firstBoyFaceButton!, secondBoyFaceButton!, thirdBoyFaceButton!, forthBoyFaceButton!)
         //設定預設Button的畫面
         
         bodyFrame(firstBodyImage, firstGirlImage)
-        //設定身體畫面
+        //設定身體大小
         
         view.addSubview(firstBodyImage)
         view.addSubview(firstGirlImage)
