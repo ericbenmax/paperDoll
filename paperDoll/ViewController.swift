@@ -27,18 +27,32 @@ class ViewController: UIViewController {
     
     
     
-    
-    
-    
-  
-    
-
-    let firstHairImage = UIImageView(image: UIImage(named: "No Hair 1"))
-    let firstFaceImage = UIImageView(image: UIImage(named: "Suspicious"))
     let firstBodyImage = UIImageView(image: UIImage(named: "crossed_arms-1"))
+    let firstGirlImage = UIImageView(image: UIImage(named: "blazer-1"))
+    
+    let firstBoyHairButton = UIImage(named: "No Hair 1")
+    let secondBoyHairButton = UIImage(named: "Flat Top Long")
+    let thirdBoyHairButton = UIImage(named: "Pomp")
+    let forthBoyHairButton = UIImage(named: "Short 1")
+    let firstBoyFaceButton = UIImage(named: "Suspicious")
+    let secondBoyFaceButton = UIImage(named: "Driven")
+    let thirdBoyFaceButton = UIImage(named: "Hectic")
+    let forthBoyFaceButton = UIImage(named: "Rage")
+    
+    let firstGirlHairButton = UIImage(named: "Bangs 2")
+    let secondGirlHairButton = UIImage(named: "Bun")
+    let thirdGirlHairButton = UIImage(named: "Cornrows")
+    let forthGirlHairButton = UIImage(named: "Long Bangs")
+    let firstGirlFaceButton = UIImage(named: "Loving Grin 1")
+    let secondGirlFaceButton = UIImage(named: "Smile Big")
+    let thirdGirlFaceButton = UIImage(named: "Smile LOL")
+    let forthGirlFaceButton = UIImage(named: "Awe")
+    
+    let firstHairImage = UIImageView(image: UIImage(named: "No Hair 1"))
     let secondHairImage = UIImageView(image: UIImage(named: "Flat Top Long"))
     let thirdHairImage = UIImageView(image: UIImage(named: "Pomp"))
     let forthHairImage = UIImageView(image: UIImage(named: "Short 1"))
+    let firstFaceImage = UIImageView(image: UIImage(named: "Suspicious"))
     let secondFaceImage = UIImageView(image: UIImage(named: "Driven"))
     let thirdFaceImage = UIImageView(image: UIImage(named: "Hectic"))
     let forthFaceImage = UIImageView(image: UIImage(named: "Rage"))
@@ -52,131 +66,106 @@ class ViewController: UIViewController {
     let thirdGirlFaceImage = UIImageView(image: UIImage(named: "Smile LOL"))
     let forthGirlFaceImage = UIImageView(image: UIImage(named: "Awe"))
     
-    
     let firstBodyButton = UIImageView(image: UIImage(named: "crossed_arms-1"))
-    let firstHairButton = UIImageView(image: UIImage(named: "No Hair 1"))
-    let secondHairButton = UIImageView(image: UIImage(named: "Flat Top Long"))
-    let thirdHairButton = UIImageView(image: UIImage(named: "Pomp"))
-    let forthHairButton = UIImageView(image: UIImage(named: "Short 1"))
-    let firstFaceButtonImage = UIImageView(image: UIImage(named: "Suspicious"))
-    let secondFaceButtonImage = UIImageView(image: UIImage(named: "Driven"))
-    let thirdFaceButtonImage = UIImageView(image: UIImage(named: "Hectic"))
-    let forthFaceButtonImage = UIImageView(image: UIImage(named: "Rage"))
-    
-    let firstGirlHairButtonImage = UIImageView(image: UIImage(named: "Bangs 2"))
-    let secondGirlHairButtonImage = UIImageView(image: UIImage(named: "Bun"))
-    let thirdGirlHairButtonImage = UIImageView(image: UIImage(named: "Cornrows"))
-    let forthGirlHairButtonImage = UIImageView(image: UIImage(named: "Long Bangs"))
-    let firstGirlFaceButtonImage = UIImageView(image: UIImage(named: "Loving Grin 1"))
-    let secondGirlFaceButtonImage = UIImageView(image: UIImage(named: "Smile Big"))
-    let thirdGirlFaceButtonImage = UIImageView(image: UIImage(named: "Smile LOL"))
-    let forthGirlFaceButtonImage = UIImageView(image: UIImage(named: "Awe"))
-    
-    
+   
     var isHidden: Bool = true
     
+    func HairButton(_ firstHairButton: UIImage, _ secondHairButton: UIImage, _ thirdHairButton: UIImage, _ forthHairButton: UIImage){
+        firstHeadButton.setImage(firstHairButton, for: .normal)
+        secondHeadButton.setImage(secondHairButton, for: .normal)
+        thirdHeadButton.setImage(thirdHairButton, for: .normal)
+        forthHeadButton.setImage(forthHairButton, for: .normal)
+        
+    }//頭按鈕
     
+    func FaceButton(_ firstFaceButtonImage: UIImage, _ secondFaceButtonImage: UIImage, _ thirdFaceButtonImage: UIImage, _ forthFaceButtonImage: UIImage){
+        firstFaceButton.setImage(firstFaceButtonImage, for: .normal)
+        secondFaceButton.setImage(secondFaceButtonImage, for: .normal)
+        thirdFaceButton.setImage(thirdFaceButtonImage, for: .normal)
+        forthFaceButton.setImage(forthFaceButtonImage, for: .normal)
+        
+    }//臉按鈕
+    
+    func imageHairFrame(_ firstHairFrame: UIImageView, _ secondHairFrame: UIImageView, _ thirdHairFrame: UIImageView, _ forthHairFrame: UIImageView){
+        
+        firstHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
+        secondHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
+        thirdHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
+        forthHairFrame.frame = CGRect(x: 124, y: 108, width: 149, height: 110)//headViewImage.frame
+        
+    }//頭大小設定
+    
+    func imageFaceFrame(_ firstFaceFrame: UIImageView, _ secondFaceFrame: UIImageView, _ thirdFaceFrame: UIImageView, _ forthFaceFrame: UIImageView){
+       
+        firstFaceFrame.frame = CGRect(x: 161, y: 137, width: 85, height: 58)//faceViewImage.frame
+        secondFaceFrame.frame = CGRect(x: 161, y: 137, width: 85, height: 58)//faceViewImage.frame
+        thirdFaceFrame.frame = CGRect(x: 161, y: 137, width: 85, height: 58)//faceViewImage.frame
+        forthFaceFrame.frame = CGRect(x: 161, y: 137, width: 85, height: 58)//faceViewImage.frame
+        
+    }//臉大小設定
+    
+    func bodyFrame(_ boyFrame: UIImageView, _ girlFrame: UIImageView){
+        boyFrame.frame = CGRect(x: 37, y: 197, width: 322, height: 291)//bodyViewImage.frame
+        girlFrame.frame = CGRect(x: 37, y: 197, width: 322, height: 291)//bodyViewImage.frame
+        
+    }//身體大小設定
+    
+    func deleteHair(_ firstHair: UIImageView, _ secondHair: UIImageView, _ thirdHair: UIImageView, _ forthHair: UIImageView){
+        firstHair.removeFromSuperview()
+        secondHair.removeFromSuperview()
+        thirdHair.removeFromSuperview()
+        forthHair.removeFromSuperview()
+        
+    }//刪除頭畫面
+    
+    func deleteFace(_ firstFace: UIImageView, _ secondFace: UIImageView, _ thirdFace: UIImageView, _ forthFace: UIImageView){
+        firstFace.removeFromSuperview()
+        secondFace.removeFromSuperview()
+        thirdFace.removeFromSuperview()
+        forthFace.removeFromSuperview()
+        
+    }//刪除臉畫面
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        view.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.6, alpha: 1)
+        boyGirlView.selectedSegmentIndex = 0
+        //設定預設為男生
         
-        firstHeadButton.setTitle("", for: .normal)
-        secondHeadButton.setTitle("", for: .normal)
-        thirdHeadButton.setTitle("", for: .normal)
-        forthHeadButton.setTitle("", for: .normal)
-        firstFaceButton.setTitle("", for: .normal)
-        secondFaceButton.setTitle("", for: .normal)
-        thirdFaceButton.setTitle("", for: .normal)
-        forthFaceButton.setTitle("", for: .normal)
-
-        firstFaceImage.frame = faceViewImage.frame
-        secondFaceImage.frame = faceViewImage.frame
-        thirdFaceImage.frame = faceViewImage.frame
-        forthFaceImage.frame = faceViewImage.frame
-        firstHairImage.frame = headViewImage.frame
-        secondHairImage.frame = headViewImage.frame
-        thirdHairImage.frame = headViewImage.frame
-        forthHairImage.frame = headViewImage.frame
-        firstBodyImage.frame = bodyViewImage.frame
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        //設定頭跟臉的畫面
         
-        firstGirlFaceImage.frame = faceViewImage.frame
-        secondGirlFaceImage.frame = faceViewImage.frame
-        thirdGirlFaceImage.frame = faceViewImage.frame
-        forthGirlFaceImage.frame = faceViewImage.frame
-        firstGirlHairImage.frame = headViewImage.frame
-        secondGirlHairImage.frame = headViewImage.frame
-        thirdGirlHairImage.frame = headViewImage.frame
-        forthGirlHairImage.frame = headViewImage.frame
+        HairButton(firstBoyHairButton!, secondBoyHairButton!, thirdBoyHairButton!, forthBoyHairButton!)
+        FaceButton(firstBoyFaceButton!, secondBoyFaceButton!, thirdBoyFaceButton!, forthBoyFaceButton!)
+        //設定預設Button的畫面
         
-        
-        firstHairButton.frame = firstHeadButton.frame
-        secondHairButton.frame = secondHeadButton.frame
-        thirdHairButton.frame = thirdHeadButton.frame
-        forthHairButton.frame = forthHeadButton.frame
-        firstFaceButtonImage.frame = firstFaceButton.frame
-        secondFaceButtonImage.frame = secondFaceButton.frame
-        thirdFaceButtonImage.frame = thirdFaceButton.frame
-        forthFaceButtonImage.frame = forthFaceButton.frame
-        
-        firstGirlHairButtonImage.frame = firstHeadButton.frame
-        secondGirlHairButtonImage.frame = secondHeadButton.frame
-        thirdGirlHairButtonImage.frame = thirdHeadButton.frame
-        forthGirlHairButtonImage.frame = forthHeadButton.frame
-        firstGirlFaceButtonImage.frame = firstFaceButton.frame
-        secondGirlFaceButtonImage.frame = secondFaceButton.frame
-        thirdGirlFaceButtonImage.frame = thirdFaceButton.frame
-        forthGirlFaceButtonImage.frame = forthFaceButton.frame
-        
-        
-        //男生頭
+        bodyFrame(firstBodyImage, firstGirlImage)
+        //設定身體畫面
+        view.addSubview(firstBodyImage)
+        view.addSubview(firstGirlImage)
         view.addSubview(firstHairImage)
         view.addSubview(secondHairImage)
         view.addSubview(thirdHairImage)
         view.addSubview(forthHairImage)
-        //男生臉
         view.addSubview(firstFaceImage)
         view.addSubview(secondFaceImage)
         view.addSubview(thirdFaceImage)
         view.addSubview(forthFaceImage)
-        //男生身體
-        view.addSubview(firstBodyImage)
-        //女生頭
         view.addSubview(firstGirlHairImage)
         view.addSubview(secondGirlHairImage)
         view.addSubview(thirdGirlHairImage)
         view.addSubview(forthGirlHairImage)
-        //女生臉
         view.addSubview(firstGirlFaceImage)
         view.addSubview(secondGirlFaceImage)
         view.addSubview(thirdGirlFaceImage)
         view.addSubview(forthGirlFaceImage)
-        //女生頭按鈕
-        view.addSubview(firstGirlHairButtonImage)
-        view.addSubview(secondGirlHairButtonImage)
-        view.addSubview(thirdGirlHairButtonImage)
-        view.addSubview(forthGirlHairButtonImage)
-        //女生臉按鈕
-        view.addSubview(firstGirlFaceButtonImage)
-        view.addSubview(secondGirlFaceButtonImage)
-        view.addSubview(thirdGirlFaceButtonImage)
-        view.addSubview(forthGirlFaceButtonImage)
-        //男生頭按鈕
-        view.addSubview(firstHairButton)
-        view.addSubview(secondHairButton)
-        view.addSubview(thirdHairButton)
-        view.addSubview(forthHairButton)
-        //男生臉按鈕
-        view.addSubview(firstFaceButtonImage)
-        view.addSubview(secondFaceButtonImage)
-        view.addSubview(thirdFaceButtonImage)
-        view.addSubview(forthFaceButtonImage)
-        
-        
-        
-        
+        firstBodyImage.isHidden = false
+        firstGirlImage.isHidden = true
         firstHairImage.isHidden = false
         secondHairImage.isHidden = true
         thirdHairImage.isHidden = true
@@ -194,33 +183,31 @@ class ViewController: UIViewController {
         thirdGirlFaceImage.isHidden = true
         forthGirlFaceImage.isHidden = true
         
-        firstGirlHairButtonImage.isHidden = true
-        secondGirlHairButtonImage.isHidden = true
-        thirdGirlHairButtonImage.isHidden = true
-        forthGirlHairButtonImage.isHidden = true
-        firstGirlFaceButtonImage.isHidden = true
-        secondGirlFaceButtonImage.isHidden = true
-        thirdGirlFaceButtonImage.isHidden = true
-        forthGirlFaceButtonImage.isHidden = true
-        
+    
     }
     
-    
+
  
     @IBAction func changeButton(_ sender: UISegmentedControl) {
         
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstHairImage.isHidden = false
+            secondHairImage.isHidden = true
+            thirdHairImage.isHidden = true
+            forthHairImage.isHidden = true
             firstFaceImage.isHidden = false
-            firstFaceButtonImage.isHidden = false
-            secondFaceButtonImage.isHidden = false
-            thirdFaceButtonImage.isHidden = false
-            forthFaceButtonImage.isHidden = false
-            firstHairButton.isHidden = false
-            secondHairButton.isHidden = false
-            thirdHairButton.isHidden = false
-            forthHairButton.isHidden = false
+            secondFaceImage.isHidden = true
+            thirdFaceImage.isHidden = true
+            forthFaceImage.isHidden = true
             firstGirlHairImage.isHidden = true
             secondGirlHairImage.isHidden = true
             thirdGirlHairImage.isHidden = true
@@ -229,18 +216,14 @@ class ViewController: UIViewController {
             secondGirlFaceImage.isHidden = true
             thirdGirlFaceImage.isHidden = true
             forthGirlFaceImage.isHidden = true
-            firstGirlHairButtonImage.isHidden = true
-            secondGirlHairButtonImage.isHidden = true
-            thirdGirlHairButtonImage.isHidden = true
-            forthGirlHairButtonImage.isHidden = true
-            firstGirlFaceButtonImage.isHidden = true
-            secondGirlFaceButtonImage.isHidden = true
-            thirdGirlFaceButtonImage.isHidden = true
-            forthGirlFaceButtonImage.isHidden = true
+            HairButton(firstBoyHairButton!, secondBoyHairButton!, thirdBoyHairButton!, forthBoyHairButton!)
+            FaceButton(firstBoyFaceButton!, secondBoyFaceButton!, thirdBoyFaceButton!, forthBoyFaceButton!)
         
         default:
-            firstGirlHairImage.isHidden = false
-            firstGirlFaceImage.isHidden = false
+            
+            firstBodyImage.isHidden = false
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = true
@@ -249,24 +232,16 @@ class ViewController: UIViewController {
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
             forthFaceImage.isHidden = true
-            firstFaceButtonImage.isHidden = true
-            secondFaceButtonImage.isHidden = true
-            thirdFaceButtonImage.isHidden = true
-            forthFaceButtonImage.isHidden = true
-            firstHairButton.isHidden = true
-            secondHairButton.isHidden = true
-            thirdHairButton.isHidden = true
-            forthHairButton.isHidden = true
-            firstGirlHairButtonImage.isHidden = false
-            secondGirlHairButtonImage.isHidden = false
-            thirdGirlHairButtonImage.isHidden = false
-            forthGirlHairButtonImage.isHidden = false
-            firstGirlFaceButtonImage.isHidden = false
-            secondGirlFaceButtonImage.isHidden = false
-            thirdGirlFaceButtonImage.isHidden = false
-            forthGirlFaceButtonImage.isHidden = false
-            
-            
+            firstGirlHairImage.isHidden = false
+            secondGirlHairImage.isHidden = true
+            thirdGirlHairImage.isHidden = true
+            forthGirlHairImage.isHidden = true
+            firstGirlFaceImage.isHidden = false
+            secondGirlFaceImage.isHidden = true
+            thirdGirlFaceImage.isHidden = true
+            forthGirlFaceImage.isHidden = true
+            HairButton(firstGirlHairButton!, secondGirlHairButton!, thirdGirlHairButton!, forthGirlHairButton!)
+            FaceButton(firstGirlFaceButton!, secondGirlFaceButton!, thirdGirlFaceButton!, forthGirlFaceButton!)
         }
         
     }
@@ -274,8 +249,16 @@ class ViewController: UIViewController {
 
     @IBAction func noHairButton(_ sender: UIButton) {
         
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstHairImage.isHidden = false
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = true
@@ -286,6 +269,9 @@ class ViewController: UIViewController {
             forthGirlHairImage.isHidden = true
             
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = true
@@ -294,16 +280,25 @@ class ViewController: UIViewController {
             secondGirlHairImage.isHidden = true
             thirdGirlHairImage.isHidden = true
             forthGirlHairImage.isHidden = true
+            
         }
         
-        
+      
         
     }
-    
+  
     @IBAction func secondHairButton(_ sender: Any) {
+        
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
         
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstHairImage.isHidden = true
             secondHairImage.isHidden = false
             thirdHairImage.isHidden = true
@@ -314,24 +309,36 @@ class ViewController: UIViewController {
             forthGirlHairImage.isHidden = true
             
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
-            thirdGirlHairImage.isHidden = true
-            forthGirlHairImage.isHidden = true
+            thirdHairImage.isHidden = true
+            forthHairImage.isHidden = true
             firstGirlHairImage.isHidden = true
             secondGirlHairImage.isHidden = false
             thirdGirlHairImage.isHidden = true
             forthGirlHairImage.isHidden = true
+   
         }
        
     
     }
     
-    
+
     @IBAction func thirdHairButton(_ sender: UIButton) {
+        
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
         
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = false
@@ -342,6 +349,9 @@ class ViewController: UIViewController {
             forthGirlHairImage.isHidden = true
             
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = true
@@ -350,14 +360,24 @@ class ViewController: UIViewController {
             secondGirlHairImage.isHidden = true
             thirdGirlHairImage.isHidden = false
             forthGirlHairImage.isHidden = true
+   
+   
         }
         
     }
     
     @IBAction func forthHairButton(_ sender: UIButton) {
         
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = true
@@ -368,6 +388,9 @@ class ViewController: UIViewController {
             forthGirlHairImage.isHidden = true
             
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstHairImage.isHidden = true
             secondHairImage.isHidden = true
             thirdHairImage.isHidden = true
@@ -376,14 +399,23 @@ class ViewController: UIViewController {
             secondGirlHairImage.isHidden = true
             thirdGirlHairImage.isHidden = true
             forthGirlHairImage.isHidden = false
+
         }
     }
     
-    
+
     @IBAction func firstFaceButton(_ sender: UIButton) {
+        
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
         
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+        
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstFaceImage.isHidden = false
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
@@ -394,6 +426,9 @@ class ViewController: UIViewController {
             forthGirlFaceImage.isHidden = true
             
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
@@ -402,14 +437,23 @@ class ViewController: UIViewController {
             secondGirlFaceImage.isHidden = true
             thirdGirlFaceImage.isHidden = true
             forthGirlFaceImage.isHidden = true
+           
         }
     }
     
     
     @IBAction func secondFaceButton(_ sender: UIButton) {
         
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = false
             thirdFaceImage.isHidden = true
@@ -419,7 +463,11 @@ class ViewController: UIViewController {
             thirdGirlFaceImage.isHidden = true
             forthGirlFaceImage.isHidden = true
             
+            
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
@@ -434,8 +482,16 @@ class ViewController: UIViewController {
     
     @IBAction func thirdFaceButton(_ sender: UIButton) {
         
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = false
@@ -444,8 +500,11 @@ class ViewController: UIViewController {
             secondGirlFaceImage.isHidden = true
             thirdGirlFaceImage.isHidden = true
             forthGirlFaceImage.isHidden = true
-            
+ 
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
@@ -454,14 +513,23 @@ class ViewController: UIViewController {
             secondGirlFaceImage.isHidden = true
             thirdGirlFaceImage.isHidden = false
             forthGirlFaceImage.isHidden = true
+           
         }
     }
     
     
     @IBAction func forthFaceButton(_ sender: UIButton) {
         
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
         switch boyGirlView.selectedSegmentIndex {
         case 0:
+            
+            firstBodyImage.isHidden = false
+            firstGirlImage.isHidden = true
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
@@ -472,6 +540,9 @@ class ViewController: UIViewController {
             forthGirlFaceImage.isHidden = true
             
         default:
+            
+            firstBodyImage.isHidden = true
+            firstGirlImage.isHidden = false
             firstFaceImage.isHidden = true
             secondFaceImage.isHidden = true
             thirdFaceImage.isHidden = true
@@ -483,6 +554,38 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func resetButton(_ sender: UIButton) {
+        
+        imageHairFrame(firstHairImage, secondHairImage, thirdHairImage, forthHairImage)
+        imageFaceFrame(firstFaceImage, secondFaceImage, thirdFaceImage, forthFaceImage)
+        imageHairFrame(firstGirlHairImage, secondGirlHairImage, thirdGirlHairImage, forthGirlHairImage)
+        imageFaceFrame(firstGirlFaceImage, secondGirlFaceImage, thirdGirlFaceImage, forthGirlFaceImage)
+        
+        HairButton(firstBoyHairButton!, secondBoyHairButton!, thirdBoyHairButton!, forthBoyHairButton!)
+        FaceButton(firstBoyFaceButton!, secondBoyFaceButton!, thirdBoyFaceButton!, forthBoyFaceButton!)
+        
+        boyGirlView.selectedSegmentIndex = 0
+        
+        firstBodyImage.isHidden = false
+        firstGirlImage.isHidden = true
+        firstHairImage.isHidden = false
+        secondHairImage.isHidden = true
+        thirdHairImage.isHidden = true
+        forthHairImage.isHidden = true
+        firstFaceImage.isHidden = false
+        secondFaceImage.isHidden = true
+        thirdFaceImage.isHidden = true
+        forthFaceImage.isHidden = true
+        firstGirlHairImage.isHidden = true
+        secondGirlHairImage.isHidden = true
+        thirdGirlHairImage.isHidden = true
+        forthGirlHairImage.isHidden = true
+        firstGirlFaceImage.isHidden = true
+        secondGirlFaceImage.isHidden = true
+        thirdGirlFaceImage.isHidden = true
+        forthGirlFaceImage.isHidden = true
+    }
     
 }
 
