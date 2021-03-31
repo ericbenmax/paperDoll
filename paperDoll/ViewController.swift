@@ -66,6 +66,9 @@ class ViewController: UIViewController {
     let thirdGirlFaceImage = UIImageView(image: UIImage(named: "Smile LOL"))
     let forthGirlFaceImage = UIImageView(image: UIImage(named: "Awe"))
     
+    let hairLabel = UILabel(frame: CGRect(x: 37, y: 598, width: 50, height: 30))
+    let faceLabel = UILabel(frame: CGRect(x: 37, y: 658, width: 50, height: 30))
+    
     let firstBodyButton = UIImageView(image: UIImage(named: "crossed_arms-1"))
    
     var isHidden: Bool = true
@@ -129,6 +132,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hairLabel.text = "Hair"
+        faceLabel.text = "Face"
+        view.addSubview(hairLabel)
+        view.addSubview(faceLabel)
         
         view.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.6, alpha: 1)
         boyGirlView.selectedSegmentTintColor = UIColor(red: 0.8, green: 1, blue: 1, alpha: 1)
