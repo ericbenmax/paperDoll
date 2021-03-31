@@ -137,6 +137,7 @@ class ViewController: UIViewController {
         faceLabel.text = "Face"
         view.addSubview(hairLabel)
         view.addSubview(faceLabel)
+        //設定Label
         
         view.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.6, alpha: 1)
         boyGirlView.selectedSegmentTintColor = UIColor(red: 0.8, green: 1, blue: 1, alpha: 1)
@@ -156,6 +157,7 @@ class ViewController: UIViewController {
         
         bodyFrame(firstBodyImage, firstGirlImage)
         //設定身體畫面
+        
         view.addSubview(firstBodyImage)
         view.addSubview(firstGirlImage)
         view.addSubview(firstHairImage)
@@ -192,7 +194,7 @@ class ViewController: UIViewController {
         secondGirlFaceImage.isHidden = true
         thirdGirlFaceImage.isHidden = true
         forthGirlFaceImage.isHidden = true
-        
+        //畫面顯示
     
     }
     
