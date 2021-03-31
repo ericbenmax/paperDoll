@@ -68,8 +68,6 @@ class ViewController: UIViewController {
     
     let hairLabel = UILabel(frame: CGRect(x: 37, y: 598, width: 50, height: 30))
     let faceLabel = UILabel(frame: CGRect(x: 37, y: 658, width: 50, height: 30))
-    
-    let firstBodyButton = UIImageView(image: UIImage(named: "crossed_arms-1"))
    
     var isHidden: Bool = true
     
